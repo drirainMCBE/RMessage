@@ -1,0 +1,6 @@
+name: RMessage
+main: RoMo\RMessage\RMessage
+author: RoMo_Official
+version: "1.0.0"
+api:
+  - 4.0.0
