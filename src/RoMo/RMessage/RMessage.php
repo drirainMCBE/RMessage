@@ -16,7 +16,7 @@ class RMessage extends PluginBase implements Listener{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
     public function onJoin(PlayerJoinEvent $event){
-        $event->setJoinMessage(false);
+        $event->setJoinMessage("");
         $player = $event->getPlayer();
         $name = $player->getName();
         $this->getServer()->broadcastTip(" §b". $name ."§f님이 접속 하셨습니다! ( §a". count($this->getServer()->getOnlinePlayers()) ."명§f ) ");
@@ -36,7 +36,7 @@ class RMessage extends PluginBase implements Listener{
         }
     }*/
     public function onQuit(PlayerQuitEvent $event){
-        $event->setQuitMessage(false);
+        $event->setQuitMessage("");
         $name = $event->getPlayer()->getName();
         $this->getServer()->broadcastTip("§b". $name ."§f님이 퇴장 하셨습니다! ( §a". (count($this->getServer()->getOnlinePlayers()) -1) ."명§f ) ");
     }
